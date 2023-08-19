@@ -386,17 +386,16 @@ docker pull caoquocviet/dash_dockerimage
 
 docker run -d caoquocviet/dash_dockerimage:latest
 
-## Setup:
+## Setup from scratch:
+4. Building Docker Images and Dockerfile
+To build a Docker image:
+docker build -t image-name .
+
+Run a container from the image: After building the image, you can create and run a container using the image:
+docker run -d -p 80:80 --name container-name image-name
+
 1. Running Containers with Docker
 Start by running two containers using Docker, each containing different parts of the project.
-
-Frontend Container
-docker pull caoquocviet/fe_dockerimage:1.0
-docker run -d caoquocviet/fe_dockerimage:1.0
-
-Dashboard Container
-docker pull caoquocviet/dash_dockerimage
-docker run -d caoquocviet/dash_dockerimage:latest
 
 2. SSH into Each Container
 To access a shell within each container, use the following command:
