@@ -386,25 +386,42 @@ docker pull caoquocviet/dash_dockerimage
 docker run -d caoquocviet/dash_dockerimage:latest
 
 ## Setup:
+1. Running Containers with Docker
+Start by running two containers using Docker, each containing different parts of the project.
 
-# 1: Build the Docker image:
-docker build -t my_nginx_image .
+Frontend Container
+docker pull caoquocviet/fe_dockerimage:1.0
+docker run -d caoquocviet/fe_dockerimage:1.0
 
-# 2: Run a new container from the built image:
-docker run -d -p 80:80 --name my_nginx_container my_nginx_image
+Dashboard Container
+docker pull caoquocviet/dash_dockerimage
+docker run -d caoquocviet/dash_dockerimage:latest
 
-# 3: SSH into the container:
-docker exec -it my_nginx_container /bin/bash
+2. SSH into Each Container
+To access a shell within each container, use the following command:
+docker exec -it container-name /bin/bash
 
-# 4: Copy Files to Container: To copy the "TMDT-main-main" directory from your local machine to the running container, use the following command:
-docker cp "C:\Users\Cao_Quoc_Viet\Documents\Zalo Received Files\TMDT-main-main (2)\TMDT-main-main" my_nginx_container:/root/
+4. Copying Directories
+To copy directories from your local machine to a container, use the following command in your local terminal:
 
-# 5: Nginx Server Configuration:
-The Nginx server is already installed in the container, and the configuration is set up during the Docker image build process. You can access the web application served by Nginx by opening http://localhost in your browser.
+docker cp /local/path/to/folder container-name:/container/path/
+And to copy from a container to your local machine:
 
-# 6: Restart the Container: If you make any changes to the container or its configuration, you can restart the container using the following command:
-docker restart my_nginx_container
 
+docker cp container-name:/container/path/to/folder /local/path/
+4. Configure .env File
+Open the .env file in the project directory and configure the environment variables as follows:
+
+VITE_URL=http://server.doanchamcam.click
+VITE_URL=http://server.doanchamcam.click
+
+5. Nginx Server Configuration
+The Nginx server is already installed within the container, and its configuration is set during the Docker image build process. You can access the web application served by Nginx by opening http://localhost in your browser.
+
+6. Restart the Container
+If you make any changes to a container or its configuration, restart it using the following command:
+
+docker restart container-name
 
 ## Contribution
 **Phạm Ngọc Khôi**: https://github.com/khoipn21 <br>
