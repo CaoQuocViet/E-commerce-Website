@@ -137,13 +137,13 @@ server {
 ```
 
 ```
-ln -s /etc/nginx/sites-available/netflix /etc/nginx/sites-enabled/netflix
+ln -s /etc/nginx/sites-available/doanchamcam.click /etc/nginx/sites-enabled/doanchamcam.click
 
 ```
 
 ##### Write your fist message
 ```
-nano /var/www/netflix/index.html
+nano /var/www/doanchamcam.click/index.html
 
 ```
 
