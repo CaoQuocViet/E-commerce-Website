@@ -194,7 +194,7 @@ cd doanchamcam.click
 ```
 
 ```
-git clone <your repository>
+git clone https://github.com/CaoQuocViet/E-commerce-Website.git
 ```
 
 ## Nginx Configuration for new apps
