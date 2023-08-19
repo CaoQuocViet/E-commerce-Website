@@ -2,6 +2,33 @@
   <img src="Demo.png" alt="AR Wedding Invitation" width="600">
 </p>
 
+# E-Commerce Website
+
+## Description
+E-Commerce Website (ECW) is an open-source web application developed using the following technologies:
+- Front-end: ReactJS, Bootstrap 5, Redux
+- Back-end: NodeJS, ExpressJS, MongoDB
+
+## Features
+- Users:
+  1. Register an account
+  2. Log in
+  3. Search for products
+  4. Advanced search based on categories
+  5. Add products to the cart
+  6. Manage cart items
+  7. Manage user profile
+  8. Change password
+  9. View order status
+  10. Complete order payment
+- Admin:
+  1. Manage products
+  2. Add products
+  3. Manage and update order status
+  4. View sales statistics
+  5. Manage users.
+
+## Installation
 # Connecting to the VPS
 
 To connect your VPS server, you can use your server IP, you can create a root password and enter the server with your IP address and password credentials. But the more secure way is using an SSH key.
@@ -347,3 +374,6 @@ Let’s Encrypt’s certificates are only valid for ninety days. To set a timer 
 systemctl status certbot.timer
 ```
 
+## Contribution
+**Phạm Ngọc Khôi**: https://github.com/khoipn21 <br>
+**Cao Quốc Việt**: https://github.com/CaoQuocViet
